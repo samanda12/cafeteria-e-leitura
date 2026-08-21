@@ -1,0 +1,113 @@
+:root{
+  --bg:#f6f2ec;
+  --paper:#fffefb;
+  --muted:#6b6b6b;
+  --accent:#8b5e3c;
+  --accent-2:#376278;
+  --radius:12px;
+  --max-width:1100px;
+  font-size:16px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Montserrat, Lora, Cormorant Garamond, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+.paper-texture{position:fixed;inset:0;background:linear-gradient(180deg, rgba(255,255,255,.6), rgba(246,242,236,.6));pointer-events:none;z-index:0}
+header.site-header{
+  position:sticky;top:0;background:rgba(255,255,255,0.9);backdrop-filter:blur(4px);z-index:20;border-bottom:1px solid rgba(0,0,0,.04);
+  display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:12px;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.brand-icon{font-size:24px}
+.brand small{display:block;color:var(--muted);font-size:.8rem}
+.main-nav{display:flex;gap:14px}
+.main-nav a{color:inherit;text-decoration:none;padding:8px;border-radius:8px}
+.main-nav a:focus{outline:3px solid #ffdca6}
+.menu-toggle{display:none;background:transparent;border:0;font-size:22px}
+.header-actions{display:flex;gap:8px;align-items:center}
+.icon-btn,.profile-btn{background:transparent;border:1px solid transparent;padding:8px 10px;border-radius:8px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{background:transparent;border:1px solid rgba(0,0,0,.06)}
+
+main{max-width:var(--max-width);margin:28px auto;padding:0 18px;position:relative;z-index:1}
+.hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-bottom:28px}
+.eyebrow{color:var(--muted);font-size:.9rem}
+.hero-copy h1{font-family:'Cormorant Garamond',serif;font-size:2.1rem;margin:6px 0}
+.hero-text{color:var(--muted);max-width:46ch}
+.hero-buttons{margin-top:14px;display:flex;gap:10px}
+.hero-scene{background:linear-gradient(180deg,#fff,#f7f4ef);padding:18px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.06);height:100%}
+.hero-note{display:block;margin-top:12px;color:var(--muted);font-style:italic}
+
+.section-shell{background:var(--paper);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.04);margin-bottom:18px}
+.section-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.ritual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.ritual-card{padding:12px;border-radius:10px;background:linear-gradient(180deg, #fff, #fbfaf8)}
+.ritual-card.featured{grid-column:span 2;background:linear-gradient(90deg,#fff8f2,#fff)}
+
+.genre-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.genre{background:transparent;border:1px solid rgba(0,0,0,.06);padding:8px 10px;border-radius:999px}
+.genre.active{background:var(--accent);color:#fff;border-color:transparent}
+
+.book-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.book-card{display:flex;gap:10px;align-items:center;padding:10px;border-radius:12px}
+.book-cover{width:92px;height:120px;border-radius:8px;padding:8px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
+.cover-rose{background:#d16b77}
+.cover-olive{background:#6b8b48}
+.cover-wine{background:#7a2e3a}
+.cover-brown{background:#6b4f3d}
+.cover-cream{background:#d9cdbf;color:#333}
+.book-info h3{margin:0 0 6px 0}
+.read-btn{background:var(--accent-2);color:#fff;padding:8px 10px;border-radius:8px;border:0}
+
+.community-posts .post{display:flex;gap:10px;padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,.03);margin-bottom:8px}
+.avatar{width:44px;height:44px;border-radius:8px;background:#e9e1d8;display:flex;align-items:center;justify-content:center;font-weight:700}
+
+footer{max-width:var(--max-width);margin:18px auto;padding:22px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+
+.search-modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);z-index:60;visibility:hidden;opacity:0;transition:opacity .18s ease}
+.search-modal[aria-hidden="false"]{visibility:visible;opacity:1}
+.search-box{background:var(--paper);padding:18px;border-radius:12px;max-width:720px;width:94%}
+.search-box input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,.06);margin-top:8px}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  .menu-toggle{display:inline-block}
+  .main-nav{position:fixed;right:12px;top:64px;background:var(--paper);padding:12px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.12);display:none;flex-direction:column}
+  .main-nav.open{display:flex}
+}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* focus styles */
+button:focus, a:focus, input:focus{outline:3px solid #ffdca6;outline-offset:2px}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--espresso:#2b211d;--coffee:#4b3429;--cream:#f5ead7;--paper:#ead9bd;--wine:#6d3d3d;--olive:#5c6049;--gold:#a88655;--ink:#342923;--muted:#77685d;--line:rgba(75,52,41,.18)}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:"Lora",serif;line-height:1.6}
+button,a{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}
+.paper-texture{position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#7b6046 .55px,transparent .55px);background-size:8px 8px;z-index:20;mix-blend-mode:multiply}
+.site-header{height:86px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(245,234,215,.95);position:sticky;top:0;z-index:30;backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:12px}.brand-icon{font-size:30px}.brand strong{display:block;font:700 28px "Cormorant Garamond",serif;line-height:1}.brand small{font:10px "Montserrat",sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.main-nav{display:flex;gap:30px;font:500 12px "Montserrat",sans-serif;text-transform:uppercase;letter-spacing:1px}.main-nav a{transition:.2s}.main-nav a:hover{color:var(--wine)}
+.header-actions{display:flex;gap:12px;align-items:center}.icon-btn{border:0;background:none;font-size:26px}.profile-btn{border:1px solid var(--coffee);background:transparent;padding:9px 18px;border-radius:2px;font:600 11px "Montserrat";text-transform:uppercase;letter-spacing:1px}.menu-toggle{display:none;border:0;background:none;font-size:25px}
+.hero{min-height:650px;padding:70px 8%;display:grid;grid-template-columns:1fr .95fr;align-items:center;gap:50px;background:linear-gradient(110deg,#f5ead7 0%,#ead7b8 100%);overflow:hidden}
+.eyebrow{font:600 11px "Montserrat";letter-spacing:2px;text-transform:uppercase;color:var(--wine);margin-bottom:12px}.hero h1{font:600 clamp(48px,6vw,78px) "Cormorant Garamond";line-height:.92;max-width:700px}.hero h1 em{color:var(--wine);font-weight:500}.hero-text{max-width:570px;color:var(--muted);margin:25px 0;font-size:17px}.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;justify-content:center;align-items:center;padding:13px 22px;font:600 11px "Montserrat";letter-spacing:1px;text-transform:uppercase;border:1px solid var(--coffee);transition:.25s}.btn-primary{background:var(--coffee);color:var(--cream)}.btn-primary:hover{background:var(--wine)}.btn-ghost:hover{background:rgba(75,52,41,.08)}
+.hero-scene{height:480px;position:relative;background:#c7ae89;border:8px solid #4c372d;box-shadow:0 25px 45px #4b342933;overflow:hidden}.window{position:absolute;top:25px;left:18%;width:50%;height:45%;background:#777d6a;border:10px solid #63483a;box-shadow:inset 0 0 0 2px #ead9bd}.window:after{content:"";position:absolute;inset:50% auto auto 0;width:100%;border-top:5px solid #63483a}.window span{position:absolute;top:0;bottom:0;width:4px;background:#63483a}.window span:nth-child(1){left:25%}.window span:nth-child(2){left:50%}.window span:nth-child(3){left:75%}.lamp{position:absolute;right:8%;top:5%;width:70px;height:100px;border-bottom:6px solid #4b3429}.lamp:after{content:"";position:absolute;bottom:-5px;left:-20px;width:110px;height:65px;border-radius:50% 50% 15% 15%;background:#d1a968;box-shadow:0 10px 45px #f4c86b}.plant{position:absolute;right:8%;bottom:25%;font-size:95px;color:#4d5540;transform:rotate(-15deg)}.coffee-cup{position:absolute;left:12%;bottom:20%;font-size:70px;filter:drop-shadow(0 10px 4px #3b281c44)}.open-book{position:absolute;bottom:9%;left:28%;width:60%;height:37%;display:flex;filter:drop-shadow(0 13px 7px #3b281c55);transform:rotate(-3deg)}.book-page{width:50%;background:#f4e5c9;border:1px solid #c9b48e;padding:22px}.left-page{border-radius:8px 2px 2px 8px;transform:skewY(2deg)}.right-page{border-radius:2px 8px 8px 2px;transform:skewY(-2deg)}.book-page i{display:block;border-top:1px solid #b9a27e;margin:12px 0}.hero-note{position:absolute;bottom:5%;right:8%;font:italic 18px "Cormorant Garamond";color:#594235;transform:rotate(-5deg)}
+.section-shell{padding:80px 8%;max-width:1500px;margin:auto}.section-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:32px}.section-heading h2,.cafe-content h2,.community h2,.radio h2{font:600 clamp(34px,4vw,52px) "Cormorant Garamond";line-height:1}.date-note,.view-all{font:11px "Montserrat";text-transform:uppercase;letter-spacing:1px;color:var(--muted)}.view-all:hover{color:var(--wine)}
+.ritual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.ritual-card{padding:28px;background:#f0dfc4;border:1px solid var(--line);min-height:235px;transition:.25s}.ritual-card:hover{transform:translateY(-4px);box-shadow:0 12px 25px #4b342915}.ritual-card.featured{background:#3c2c25;color:var(--cream)}.card-icon{font-size:28px;display:block;margin-bottom:15px}.ritual-card small{font:600 9px "Montserrat";text-transform:uppercase;letter-spacing:1.5px;color:var(--gold)}.ritual-card h3{font:600 28px "Cormorant Garamond";margin:7px 0}.ritual-card p{font-size:13px;color:var(--muted)}.featured p{color:#d7c7b5}.text-link{border:0;background:none;color:var(--wine);font:600 10px "Montserrat";text-transform:uppercase;letter-spacing:1px;margin-top:18px}.featured .text-link{color:#d6b476}
+.library{background:#f7eddd;max-width:none;padding-left:8%;padding-right:8%}.genre-tabs{display:flex;gap:8px;overflow:auto;padding-bottom:25px}.genre{border:1px solid var(--line);background:transparent;padding:9px 15px;font:600 10px "Montserrat";text-transform:uppercase;letter-spacing:1px;white-space:nowrap}.genre.active,.genre:hover{background:var(--coffee);color:var(--cream);border-color:var(--coffee)}.book-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:25px}.book-card{min-width:0}.book-cover{aspect-ratio:2/3;position:relative;padding:25px 18px;display:flex;flex-direction:column;justify-content:space-between;color:#f5ead7;box-shadow:8px 10px 20px #3b291b1c;transition:.3s}.book-card:hover .book-cover{transform:rotate(-1deg) translateY(-5px);box-shadow:10px 18px 25px #3b291b30}.book-cover span{font:600 8px "Montserrat";text-transform:uppercase;letter-spacing:2px}.book-cover strong{font:600 37px/0.85 "Cormorant Garamond";text-align:center}.book-cover small{font:9px "Montserrat";text-align:center;letter-spacing:1px}.cover-rose{background:#85565b}.cover-olive{background:#59604a}.cover-wine{background:#63383b}.cover-brown{background:#665043}.cover-cream{background:#b29470;color:#3e3029}.book-info{padding-top:13px}.book-info h3{font:600 22px "Cormorant Garamond"}.book-info p{font-size:11px;color:var(--muted);margin:1px 0 8px}.read-btn{border:0;background:none;color:var(--wine);font:600 9px "Montserrat";text-transform:uppercase;letter-spacing:1px}.legal-note{margin-top:35px;color:#89766a;font:10px "Montserrat"}
+.cafe-section{max-width:none;background:#342620;color:var(--cream);display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:70px}.cafe-content h2{max-width:620px}.cafe-content>p:not(.eyebrow){color:#d3c2b0;max-width:600px;margin:20px 0 30px}.cafe-menu{display:grid;grid-template-columns:1fr 1fr;gap:15px}.cafe-menu div{padding:17px;border-top:1px solid #a886553d}.cafe-menu span{font-size:23px;margin-right:12px}.cafe-menu strong{font:600 20px "Cormorant Garamond"}.cafe-menu small{display:block;color:#aa9a8c;font:9px "Montserrat";text-transform:uppercase;letter-spacing:1px;margin-left:38px}.cafe-illustration{height:380px;background:#5a4536;position:relative;border:1px solid #a8865545}.shelf{position:absolute;top:15%;left:8%;right:8%;height:80px;border-bottom:9px solid #342620;display:flex;align-items:end;gap:5px;padding-left:15px}.shelf span{font-size:55px}.round-table{position:absolute;width:180px;height:110px;border-radius:50%;background:#8a6a4e;bottom:18%;left:28%;box-shadow:0 25px 0 -8px #3b2b23}.round-table div{position:absolute;font-size:48px}.round-table div:first-child{top:15px;left:45px}.round-table div:last-child{top:-20px;right:20px;transform:rotate(-8deg)}.chair{position:absolute;width:95px;height:145px;border:12px solid #3c2b23;border-bottom:0;right:10%;bottom:17%;border-radius:45px 45px 0 0}
+.community{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.community-intro>p:not(.eyebrow){color:var(--muted);max-width:550px;margin:20px 0 25px}.community-posts{display:grid;gap:15px}.post{padding:23px;background:#f0dfc4;border:1px solid var(--line);display:grid;grid-template-columns:42px 1fr;gap:10px}.avatar{width:42px;height:42px;border-radius:50%;background:#6d3d3d;color:white;display:grid;place-items:center;font:600 19px "Cormorant Garamond"}.post strong{font:600 17px "Cormorant Garamond"}.post small{display:block;font:8px "Montserrat";color:var(--muted);text-transform:uppercase}.post p{grid-column:1/-1;font-size:13px;margin:5px 0}.post-actions{grid-column:1/-1;font:10px "Montserrat";color:var(--wine)}
+.radio{max-width:none;background:#e4d1b2}.radio-player{background:#342620;color:var(--cream);padding:45px;display:flex;align-items:center;gap:50px;max-width:1180px;margin:auto}.vinyl{width:180px;height:180px;border-radius:50%;background:repeating-radial-gradient(circle,#171313 0 4px,#272121 5px 7px);display:grid;place-items:center;flex:none;box-shadow:0 10px 25px #21150f88}.vinyl-label{width:65px;height:65px;border-radius:50%;background:#a88655;display:grid;place-items:center;color:#342620;font:700 16px "Montserrat"}.radio-copy{flex:1}.radio-copy h2{font-size:44px}.radio-copy>p:not(.eyebrow){color:#cdbca9;margin:10px 0 20px}.player-controls{display:flex;align-items:center;gap:15px}.play-btn{width:48px;height:48px;border-radius:50%;border:0;background:#a88655;color:#342620}.track{flex:1}.track strong{display:block;font:600 20px "Cormorant Garamond"}.track span{font:9px "Montserrat";color:#aa9a8c;text-transform:uppercase}.progress{height:3px;background:#ffffff22;margin-top:10px}.progress i{display:block;width:0;height:100%;background:#d3b37d;transition:.3s}.volume-btn{border:0;background:none;color:var(--cream)}.radio-note{display:block;color:#88776a;font:9px "Montserrat";margin-top:18px}
+footer{background:#211a17;color:#cdbca9;padding:45px 8%;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer-brand strong{font:600 24px "Cormorant Garamond";color:#f5ead7}.footer-brand span{display:block;font:9px "Montserrat";text-transform:uppercase;letter-spacing:1px}.footer-links{display:flex;gap:22px;font:9px "Montserrat";text-transform:uppercase;letter-spacing:1px}.footer-links a:hover{color:#d3b37d}footer>p{font:10px "Montserrat";color:#796b62}
+.search-modal{position:fixed;inset:0;background:#211a17cc;display:none;place-items:start center;padding-top:12vh;z-index:100}.search-modal.open{display:grid}.search-box{background:#f5ead7;width:min(650px,90%);padding:45px;position:relative;box-shadow:0 25px 60px #0005}.close-search{position:absolute;right:18px;top:10px;border:0;background:none;font-size:30px;color:var(--coffee)}.search-box h2{font:600 40px "Cormorant Garamond";margin-bottom:20px}.search-box input{width:100%;padding:15px;border:1px solid var(--line);background:#f9f0e1;outline:none;font:14px "Lora"}.search-result{padding:15px 0;border-bottom:1px solid var(--line)}.search-result strong{font:600 20px "Cormorant Garamond"}.search-result small{display:block;color:var(--muted);font-size:11px}
+@media(max-width:1050px){.book-grid{grid-template-columns:repeat(3,1fr)}.ritual-grid{grid-template-columns:repeat(2,1fr)}.main-nav{gap:15px}.hero{grid-template-columns:1fr}.hero-scene{max-width:650px;width:100%;margin:auto}}
+@media(max-width:720px){.site-header{height:72px}.main-nav,.header-actions .profile-btn{display:none}.menu-toggle{display:block}.site-header{padding:0 5%}.main-nav.mobile-open{display:flex;position:absolute;top:72px;left:0;right:0;background:#f5ead7;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.hero{padding:55px 6%;min-height:auto}.hero-scene{height:360px}.section-shell{padding:60px 6%}.section-heading{display:block}.date-note{display:block;margin-top:10px}.book-grid{grid-template-columns:repeat(2,1fr);gap:18px}.book-cover strong{font-size:29px}.cafe-section,.community{grid-template-columns:1fr;gap:45px}.cafe-illustration{height:300px}.radio-player{padding:30px 20px;display:block}.vinyl{width:130px;height:130px;margin:0 auto 30px}.radio-copy h2{font-size:38px}.player-controls{margin-top:20px}.cafe-menu{grid-template-columns:1fr}.footer-links{width:100%;flex-wrap:wrap}}
