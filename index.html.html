@@ -30,7 +30,23 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preload" href="script.js" as="script">
 </head>
-<body>
+<body><audio id="musicas" loop>
+    <source src="musicas/jonasblakewood-folk-acoustic-calm-580573.mp3" type="audio/mpeg">
+   
+</audio>
+</button>
+
+<script>
+function tocarMusica() {
+    const musica = document.getElementById("musica");
+
+    if (musica.paused) {
+        musica.play();
+    } else {
+        musica.pause();
+    }
+}
+</script>
   <div class="paper-texture"></div>
 
   <header class="site-header">
@@ -183,15 +199,20 @@
         </article>
         <article class="book-card" data-category="fantasia">
           <div class="book-cover cover-brown">
-            <span>fantasia</span><strong>A Floresta<br>de<br>Inverno</strong><small>coleção aberta</small>
+            <span>fantasia</span><strong>eu sou<br>a<br>LENDA</strong><small>coleção aberta</small>
           </div>
-          <div class="book-info"><h3>A Floresta de Inverno</h3><p>Fantasia e aventura</p><button class="read-btn">Ler gratuitamente</button></div>
+          <div class="book-info"><h3>eu sou a LENDA</h3><p>Ficção Científica</p><button class="read-btn">Ler gratuitamente</button></div>
+        <a 
+    class="read-btn" 
+    href="livros/Eu Sou a Lenda Richard Matheson.pdf"
+    target="_blank">
+</a>
         </article>
         <article class="book-card" data-category="manga">
           <div class="book-cover cover-cream">
-            <span>mangá</span><strong>Lua<br>de<br>Outono</strong><small>coleção aberta</small>
+            <span>mangá</span><strong>BUSCANTO<br>de<br>LIVRO</strong><small>coleção aberta</small>
           </div>
-          <div class="book-info"><h3>Lua de Outono</h3><p>Mangá e ilustração</p><button class="read-btn">Ler gratuitamente</button></div>
+          <div class="book-info"><h3>Buscando LIVRO</h3><p>Mangá e ilustração</p><button class="read-btn">Ler gratuitamente</button></div>
         </article>
       </div>
       <p class="legal-note">* A biblioteca deve receber apenas obras em domínio público, licenciadas ou disponibilizadas pelos próprios autores.</p>
@@ -207,7 +228,7 @@
         </p>
         <div class="cafe-menu">
           <div><span>☕</span><strong>Espresso</strong><small>leituras rápidas</small></div>
-          <div><span>🍫</span><strong>Chocolate quente</strong><small>romances aconchegantes</small></div>
+          <div><span>🍫</span><strong>Chocolat          git remote set-url origin https://github.com/SEU_USUARIO/NOME_DO_REPO.git          git remote set-url origin https://github.com/SEU_USUARIO/NOME_DO_REPO.gite quente</strong><small>romances aconchegantes</small></div>
           <div><span>🍵</span><strong>Chá da tarde</strong><small>histórias tranquilas</small></div>
           <div><span>🕯️</span><strong>Café Noir</strong><small>mistério & suspense</small></div>
         </div>
@@ -250,11 +271,10 @@
           <h2>Trilha sonora para sua leitura</h2>
           <p>Instrumental, jazz, piano e sons ambientes para acompanhar seus capítulos.</p>
           <div class="player-controls">
-            <button id="playBtn" class="play-btn" aria-label="Reproduzir">▶</button>
-            <div class="track"><strong id="trackName">Piano & Chuva</strong><span id="trackStatus">pronto para começar</span><div class="progress"><i id="progress"></i></div></div>
-            <button class="volume-btn" aria-label="Volume">🔊</button>
           </div>
-          <small class="radio-note">Área preparada para conectar uma fonte de áudio licenciada.</small>
+          <audio controls src="musicas/JONASBLACKEON.mp3"></audio>
+          <audio controls src="musicas/INDIEFOLK.mp3"></audio>
+          <audio controls src="musicas/LINMD.mp3"></audio>
         </div>
       </div>
     </section>
