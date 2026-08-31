@@ -158,7 +158,20 @@ function initPlayer() {
     }
   });
 }
-
+const playlist = [
+  {
+    title: "Piano & Chuva",
+    file: "musicas/musica1.mp3"
+  },
+  {
+    title: "Café em Dia de Chuva",
+    file: "musicas/musica2.mp3"
+  },
+  {
+    title: "Jazz & Páginas",
+    file: "musicas/musica3.mp3"
+  }
+];
 function bindReadButtons() {
   document.querySelectorAll('.read-btn').forEach((button) => {
     button.addEventListener('click', () => {
