@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f6f2ec"/>
+  <g transform="translate(80,120)">
+    <text x="0" y="0" font-family="Cormorant Garamond, serif" font-size="56" fill="#6b4f3d">Café & Páginas</text>
+    <text x="0" y="72" font-family="Montserrat, sans-serif" font-size="28" fill="#376278">Onde histórias encontram café</text>
+    <text x="0" y="140" font-family="Lora, serif" font-size="22" fill="#8b5e3c">Biblioteca · Clube · Rádio</text>
+  </g>
+</svg>

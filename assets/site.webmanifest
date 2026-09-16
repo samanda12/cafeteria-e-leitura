@@ -1,0 +1,11 @@
+{
+  "name": "Café & Páginas",
+  "short_name": "Café&Páginas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f2ec",
+  "theme_color": "#f6f2ec",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "64x64", "type": "image/svg+xml" }
+  ]
+}
