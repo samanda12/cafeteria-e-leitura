@@ -33,3 +33,5 @@ Basta abrir `index.html` no navegador.
 ## Direitos autorais
 
 Não faça upload ou disponibilize livros protegidos por direitos autorais sem autorização. Para a biblioteca pública, use obras em domínio público, licenças que permitam distribuição ou obras cedidas pelos autores.
+
+Há e eu amo meu amor Ulysson
